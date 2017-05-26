@@ -1,0 +1,2 @@
+    Problema    dot(c,x)    dot(λ,b)          rb          rc        iter          ef     el_time
+   afiro.mps  -4.6475e+02  -4.6475e+02  4.3664e-14  2.3010e-15  7.8000e+01  0.0000e+00  5.9787e-01 

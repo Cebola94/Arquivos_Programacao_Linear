@@ -8,7 +8,7 @@ function interior_point_method(A, b, c; tol = 1e-5, max_time = 30, max_iter = 10
     σ = 0.0
     γ = 0.99
     iter = 0
-    ef = 0
+    status = "Ótimo"
     x = e; s = e; λ = ones(m)
     μ = dot(x,s)/n
     rc = A'* λ + s - c
@@ -73,15 +73,15 @@ function interior_point_method(A, b, c; tol = 1e-5, max_time = 30, max_iter = 10
         iter = iter + 1
         verbose && @printf("%2d  %9.1e  %9.1e  %9.1e  %9.1e  %9.1e  %9.1e\n", iter, norm(rb), norm(rc), norm(rxs), norm(λ), σ, μ)
         if iter >= max_iter
-            ef = 1
+            status = "Número máximo de iterações"
             break
         end
         el_time = time() - st_time
         if el_time >= max_time
-            ef = 2
+            status = "Tempo máximo"
             break
         end
     end
 
-    return x, λ, s, norm(rb), norm(rc), iter, ef, el_time
+    return x, dot(c,x), status, el_time
 end
