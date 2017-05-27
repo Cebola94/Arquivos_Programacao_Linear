@@ -1,0 +1,30 @@
+    Problema      dot(c,x)  Saida  Tempo
+   scsd6.mps   5.05000e+01      0  0.0091
+   scsd8.mps   9.05000e+02      0  0.0400
+  sctap2.mps   1.72481e+03      0  0.0141
+  sctap3.mps   1.42400e+03      0  0.0165
+  wood1p.mps   1.44290e+00      0  0.0524
+  sctap2.mps   1.72481e+03      0  0.0161
+  sctap3.mps   1.42400e+03      0  0.0169
+ share2b.mps  -4.15732e+02      0  0.0020
+kleemin3.mps  -1.00000e+04      0  0.0002
+kleemin4.mps  -1.00000e+06      0  0.0002
+kleemin5.mps  -1.00000e+08      0  0.0002
+kleemin6.mps  -1.00000e+10      0  0.0002
+kleemin7.mps  -1.00000e+12      0  0.0002
+    farm.mps   1.75000e+04      0  0.0002
+stocfor2.mps  -3.90244e+04      0  0.0376
+  degen3.mps  -9.87294e+02      0  0.2254
+   afiro.mps  -4.64753e+02      0  0.0006
+   blend.mps  -3.08121e+01      0  0.0015
+  israel.mps  -8.96645e+05      0  0.0045
+   sc105.mps  -5.22021e+01      0  0.0012
+   sc50a.mps  -6.45751e+01      0  0.0007
+   sc50b.mps  -7.00000e+01      0  0.0006
+ share2b.mps  -4.15732e+02      0  0.0026
+stocfor1.mps  -4.11320e+04      0  0.0021
+   capri.mps   1.91262e+03      0  0.0040
+    e226.mps  -1.87519e+01      0  0.0084
+   sc205.mps  -5.22021e+01      0  0.0033
+  sctap1.mps   1.41225e+03      0  0.0051
+   stair.mps  -4.28516e+02      0  0.0193
