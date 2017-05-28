@@ -1,0 +1,27 @@
+    Problema      dot(c,x)  Saida  Iterações  Tempo
+  noswot.mps  -4.30000e+01      0     12  0.0654
+   scsd6.mps   5.05000e+01      0     13  0.4749
+   scsd8.mps   9.05000e+02      0     12  1.7224
+  wood1p.mps   1.44290e+00      0     18  4.7323
+  sctap2.mps   1.72481e+03      0     15  2.2218
+  sctap3.mps   1.42400e+03      0     17  3.5916
+kleemin3.mps  -1.00000e+04      0     19  0.0033
+kleemin4.mps  -1.00000e+06      0     30  0.0055
+kleemin5.mps  -1.00000e+08      0     59  0.0122
+kleemin6.mps  -1.00000e+10      0     82  0.0250
+kleemin7.mps  -1.00000e+12      0    117  0.0298
+    farm.mps   1.75000e+04      0     24  0.0067
+stocfor2.mps  -3.90244e+04      0     61  12.5022
+   afiro.mps  -4.64753e+02      0     79  0.0524
+   blend.mps  -3.08121e+01      0     19  0.0432
+  israel.mps  -8.96645e+05      0    795  6.7724
+   sc105.mps  -5.22021e+01      0     58  0.1208
+   sc50a.mps  -6.45751e+01      0     26  0.0191
+   sc50b.mps  -7.00000e+01      0     22  0.0163
+ share2b.mps  -4.15732e+02      0     23  0.0668
+stocfor1.mps  -4.11320e+04      0     47  0.1240
+   capri.mps   1.91262e+03      0     80  0.9102
+    e226.mps  -1.87519e+01      0     28  0.3544
+   sc205.mps  -5.22021e+01      0     55  0.2232
+  sctap1.mps   1.41225e+03      0     19  0.2871
+   stair.mps  -4.28516e+02      0     37  0.7628

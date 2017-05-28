@@ -8,7 +8,6 @@ function clp(A, b, c)
     @objective(mod, Min, dot(c,x))
 
     status = solve(mod)
-
     if string(:Optimal) == "Optimal"
         stat = 0
     else

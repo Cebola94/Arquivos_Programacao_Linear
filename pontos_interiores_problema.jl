@@ -1,4 +1,5 @@
-function interior_point_method(A, b, c; tol = 1e-7, max_time = 30, max_iter = 1000, verbose = false)
+function pontos_interiores_problema(problema; tol = 1e-7, max_time = 30, max_iter = 1000, verbose = false)
+    A,b,c = ler_problema(problema)
     el_time = 0.0
     st_time = 0.0
     st_time = time()
@@ -82,5 +83,42 @@ function interior_point_method(A, b, c; tol = 1e-7, max_time = 30, max_iter = 10
         end
     end
 
-    return x, dot(c,x), status, el_time
+    return x, dot(c,x), status, iter, el_time
+end
+
+function ler_problema(problema)
+    mod = Model(solver=ClpSolver())
+    m_internal = MathProgBase.LinearQuadraticModel(ClpSolver())
+    MathProgBase.loadproblem!(m_internal, problema)
+    c = MathProgBase.getobj(m_internal)
+    A = MathProgBase.getconstrmatrix(m_internal)
+    m, n = size(A)
+    xlb = MathProgBase.getvarLB(m_internal)
+    xub = MathProgBase.getvarUB(m_internal)
+    l = MathProgBase.getconstrLB(m_internal)
+    u = MathProgBase.getconstrUB(m_internal)
+
+    n = length(l)
+    b = spzeros(n)
+    for i = 1:n
+        if l[i] == -Inf
+            b[i] = u[i]
+            s = spzeros(n)
+            s[i] = 1
+            A = [A s]
+        elseif u[i] == Inf
+            b[i] = l[i]
+            s = spzeros(n)
+            s[i] = -1
+            A = [A s]
+        elseif l[i] == u[i]
+            b[i] = l[i]
+        else
+            error("Problema $prob inválido")
+        end
+    end
+    m,n_1 = size(A)
+    n_2 = length(c)
+    c = [c;spzeros(n_1 - n_2)]
+    return A,b,c
 end
