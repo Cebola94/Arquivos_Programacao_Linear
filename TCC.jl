@@ -9,7 +9,7 @@ include("clp_problema.jl")
 lista =["noswot.mps","scsd6.mps","scsd8.mps","wood1p.mps","sctap2.mps","sctap3.mps",
 "kleemin3.mps","kleemin4.mps","kleemin5.mps","kleemin6.mps","kleemin7.mps","farm.mps",
 "stocfor2.mps","afiro.mps","blend.mps","israel.mps","sc105.mps","sc50a.mps","sc50b.mps",
-"share2b.mps","stocfor1.mps","capri.mps","e226.mps","sc205.mps","sctap1.mps","stair.mps"]
+"share2b.mps","stocfor1.mps","sc205.mps","sctap1.mps"]
 
 metodos = [clp_problema,pontos_interiores_problema]
 
@@ -29,7 +29,7 @@ for (i_m,met) in enumerate(metodos)
                 if isnan(f) || f == Inf || f == -Inf
 					status = 3
 				end
-                if status == 0
+                if status == 0 && all(x .>= 0)
                     P[i_p,i_m] = tempo
                 end
                 str = @sprintf("%12s  %12.5e  %5d  %5d  %5.4f\n", prob, f, status, iter, tempo)
