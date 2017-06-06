@@ -1,5 +1,5 @@
 using JuMP ,Clp, MathProgBase
-function pontos_interiores(A, b, c, m, n; tol = 1e-7, max_time = 30, max_iter = 1000, verbose = false)
+function pontos_interiores(A, b, c, rest, vari; tol = 1e-7, max_time = 30, max_iter = 1000, verbose = false)
   el_time = 0.0
   st_time = 0.0
   st_time = time()
@@ -25,10 +25,10 @@ function pontos_interiores(A, b, c, m, n; tol = 1e-7, max_time = 30, max_iter = 
     D_2 = -s./x
     D_2 = sparse(diagm(D_2))
     Q = sparse(full(([spzeros(m,m) A; A' D_2])))
-    # if det(Q) < 1e-30
-    #   status = 4
-    #   break
-    # end
+    #if det(Q) <= -Inf || det(Q) >= Inf
+    #  status = 4
+    #  break
+    #end
     LU = lufact(Q)
     d = LU\b_red
     dλ_af = d[1:m]
@@ -85,10 +85,10 @@ function pontos_interiores(A, b, c, m, n; tol = 1e-7, max_time = 30, max_iter = 
       break
     end
   end
-  return x, m, n, dot(c,x), status, iter, el_time
+  return x, rest, vari, dot(c,x), status, iter, el_time
 end
 
-function ler_problema(problema; lim_var = 2000, lim_rest = 2000)
+function ler_problema(problema; lim_var = 3000, lim_rest = 5000)
   mod = Model(solver=ClpSolver())
   m_internal = MathProgBase.LinearQuadraticModel(ClpSolver())
   MathProgBase.loadproblem!(m_internal, problema)
@@ -96,8 +96,8 @@ function ler_problema(problema; lim_var = 2000, lim_rest = 2000)
   xub = MathProgBase.getvarUB(m_internal)
   l = MathProgBase.getconstrLB(m_internal)
   A = MathProgBase.getconstrmatrix(m_internal)
-  m,n = size(A)
-  if all(xlb .== 0) && all(xub .== Inf) && n <= lim_var && m <= lim_rest
+  rest,vari = size(A)
+  if all(xlb .== 0) && all(xub .== Inf) && vari <= lim_var && rest <= lim_rest
     u = MathProgBase.getconstrUB(m_internal)
     c = MathProgBase.getobj(m_internal)
 
@@ -118,18 +118,18 @@ function ler_problema(problema; lim_var = 2000, lim_rest = 2000)
         b[i] = l[i]
       else
         #error("Problema $problema saiu por erro nos limitantes de u e l")
-        return [],[],[],m,n
+        return [],[],[],rest,vari
       end
     end
     m,n_1 = size(A)
     n_2 = length(c)
     c = [c;spzeros(n_1 - n_2)]
-    return A, b, c, m, n
-  elseif m > lim_rest || n > lim_var
+    return A, b, c, rest, vari
+  elseif rest > lim_rest || vari > lim_var
     #error("Problema $problema saiu por erro no tamanho do problema")
-    return [],[],[],m,n
+    return [],[],[],rest, vari
   else
     #error("Problema $problema saiu por erro nos limitantes de xub e xlb")
-    return [],[],[],m,n
+    return [],[],[],rest, vari
   end
 end

@@ -6,7 +6,6 @@ include("pontos_interiores_problema.jl")
 include("clp_problema.jl")
 
 metodos = [pontos_interiores,clp_problema,clp_problema_sem_presolve]
-metodos = [pontos_interiores]
 prob_tam = length(readdir("MPS"))
 met_tam = length(metodos)
 
@@ -29,19 +28,16 @@ for (i_m,met) in enumerate(metodos)
               status = 3
             end
           else
-            x, m, n, f, status, iter, tempo = Inf, m, n, Inf, Inf, Inf, Inf
+            x, m, n, f, status, iter, tempo = Inf, m, n, Inf, 5, Inf, Inf
           end
         catch
-          error("Problema $prob inválido")
+          x, m, n, f, status, iter, tempo = Inf, m, n, Inf, 5, Inf, Inf
         end
       else
         x, m, n , f, status, iter, tempo = met("MPS/"prob)
-      end
-      if isnan(f) || f == Inf || f == -Inf
-        status = 3
-      end
-      if status == 0 && all(x .>= 0)
-        P[i_p,i_m] = tempo
+        if isnan(f) || f == Inf || f == -Inf
+          status = 3
+        end
       end
       str = @sprintf("%12s  %12.5e  %10d  %10d  %10d  %10d  %10.4f\n", prob, f, m, n, status, iter, tempo)
       print(str)

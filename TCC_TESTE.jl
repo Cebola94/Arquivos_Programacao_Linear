@@ -8,7 +8,7 @@ include("clp_problema.jl")
 metodos = [pontos_interiores,clp_problema,clp_problema_sem_presolve]
 
 lista = ["afiro.mps","agg2.mps","agg3.mps","agg.mps","bandm.mps","blend.mps",
-"degen2.mps","degen3.mps","dfl001.mps","e226.mps","etamacro.mps","farm.mps",
+"degen2.mps","degen3.mps","e226.mps","farm.mps",
 "israel.mps","kleemin3.mps","kleemin4.mps","kleemin5.mps","kleemin6.mps","kleemin7.mps",
 "kleemin8.mps","lotfi.mps","sc105.mps","sc205.mps","sc50a.mps","sc50b.mps",
 "scagr25.mps","scagr7.mps","scfxm1.mps","scfxm2.mps","scfxm3.mps","scsd1.mps",
