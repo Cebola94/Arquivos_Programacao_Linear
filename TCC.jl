@@ -6,6 +6,12 @@ include("pontos_interiores_problema.jl")
 include("clp_problema.jl")
 
 metodos = [pontos_interiores,clp_problema,clp_problema_sem_presolve]
+lista = ["afiro.mps","agg2.mps","agg3.mps","agg.mps","bandm.mps","blend.mps","degen2.mps",
+"degen3.mps","e226.mps","farm.mps","israel.mps","kleemin3.mps","kleemin4.mps","kleemin5.mps",
+"kleemin6.mps","kleemin7.mps","kleemin8.mps","lotfi.mps","sc105.mps","sc205.mps","sc50a.mps",
+"sc50b.mps","scagr25.mps","scagr7.mps","scfxm1.mps","scfxm2.mps","scfxm3.mps","scsd1.mps",
+"scsd6.mps","scsd8.mps","sctap1.mps","sctap2.mps","sctap3.mps","share1b.mps","stocfor1.mps",
+"stocfor2.mps","wood1p.mps"]
 prob_tam = length(readdir("MPS"))
 met_tam = length(metodos)
 
@@ -18,7 +24,7 @@ for (i_m,met) in enumerate(metodos)
     str = @sprintf("%12s  %12s  %10s  %10s  %10s  %10s  %10s\n","Problema", "dot(c,x)", "Restrições", "Variáveis", "Saida", "Iterações", "Tempo")
     print(str)
     print(file,str)
-    for (i_p,prob) in enumerate(readdir("MPS"))
+    for (i_p,prob) in enumerate(lista)
       if met == pontos_interiores
         try
           A, b, c, m, n = ler_problema("MPS/"prob)
@@ -28,7 +34,7 @@ for (i_m,met) in enumerate(metodos)
               status = 3
             end
           else
-            x, m, n, f, status, iter, tempo = Inf, m, n, Inf, 5, Inf, Inf
+            x, m, n, f, status, iter, tempo = Inf, m, n, Inf, 4, Inf, Inf
           end
         catch
           x, m, n, f, status, iter, tempo = Inf, m, n, Inf, 5, Inf, Inf

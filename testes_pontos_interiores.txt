@@ -1,122 +1,38 @@
     Problema      dot(c,x)  Restrições   Variáveis       Saida   Iterações       Tempo
-  25fv47.mps           Inf         821        1571           5         Inf         Inf
- 80bau3b.mps           Inf        2262        9799           5         Inf         Inf
-adlittle.mps           Inf          56          97           5         Inf         Inf
-   afiro.mps  -4.64753e+02          27          32           0          79      0.0632
-    agg2.mps           NaN         516         302           3          49      1.4673
-    agg3.mps           NaN         516         302           3          47      1.3736
-     agg.mps           NaN         488         163           3          62      1.1837
-   bandm.mps   4.09883e+02         305         472           1        1000     13.5229
-beaconfd.mps           Inf         173         262           5         Inf         Inf
-   blend.mps  -3.08121e+01          74          83           0          19      0.0443
-    bnl1.mps           Inf         643        1175           5         Inf         Inf
-    bnl2.mps           Inf        2324        3489           5         Inf         Inf
- boeing1.mps           Inf         351         384           5         Inf         Inf
- boeing2.mps           Inf         166         143           5         Inf         Inf
-  bore3d.mps           Inf         233         315           5         Inf         Inf
-  brandy.mps           Inf         220         249           5         Inf         Inf
-   capri.mps           Inf         271         353           5         Inf         Inf
-   cre-a.mps           Inf        3516        4067           5         Inf         Inf
-   cre-b.mps           Inf        9648       72447           5         Inf         Inf
-   cre-c.mps           Inf        3068        3678           5         Inf         Inf
-   cre-d.mps           Inf        8926       69980           5         Inf         Inf
-   cycle.mps           Inf        1903        2857           5         Inf         Inf
-  czprob.mps           Inf         929        3523           5         Inf         Inf
-  d2q06c.mps           Inf        2171        5167           5         Inf         Inf
-  d6cube.mps           Inf         415        6184           5         Inf         Inf
-  degen2.mps  -1.43518e+03         444         534           0          13      0.3978
-  degen3.mps  -9.87294e+02        1503        1818           2          76     30.0818
-  dfl001.mps           Inf        6071       12230           5         Inf         Inf
-    e226.mps  -1.87519e+01         223         282           0          28      0.3770
-etamacro.mps           Inf         400         688           5         Inf         Inf
-    farm.mps   1.75000e+04           7          12           0          24      0.0085
-fffff800.mps           Inf         524         854           5         Inf         Inf
-  finnis.mps           Inf         497         614           5         Inf         Inf
-   fit1d.mps           Inf          24        1026           5         Inf         Inf
-   fit1p.mps           Inf         627        1677           5         Inf         Inf
-   fit2d.mps           Inf          25       10500           5         Inf         Inf
-   fit2p.mps           Inf        3000       13525           5         Inf         Inf
- forplan.mps           Inf         161         421           5         Inf         Inf
-  ganges.mps           Inf        1309        1681           5         Inf         Inf
-gfrd-pnc.mps           Inf         616        1092           5         Inf         Inf
-greenbea.mps           Inf        2392        5405           5         Inf         Inf
-greenbeb.mps           Inf        2392        5405           5         Inf         Inf
-  grow15.mps           Inf         300         645           5         Inf         Inf
-  grow22.mps           Inf         440         946           5         Inf         Inf
-   grow7.mps           Inf         140         301           5         Inf         Inf
-  israel.mps  -8.96645e+05         174         142           0         795      7.9570
-     kb2.mps           Inf          43          41           5         Inf         Inf
-  ken-07.mps           Inf        2426        3602           5         Inf         Inf
-  ken-11.mps           Inf       14694       21349           5         Inf         Inf
-  ken-13.mps           Inf       28632       42659           5         Inf         Inf
-  ken-18.mps           Inf      105127      154699           5         Inf         Inf
-kleemin3.mps  -1.00000e+04           3           3           0          19      0.0021
-kleemin4.mps  -1.00000e+06           4           4           0          30      0.0048
-kleemin5.mps  -1.00000e+08           5           5           0          59      0.0079
-kleemin6.mps  -1.00000e+10           6           6           0          82      0.0126
-kleemin7.mps  -1.00000e+12           7           7           0         117      0.0228
-kleemin8.mps           NaN           8           8           3          43      0.0083
-   lotfi.mps           NaN         153         308           3         535      4.1037
-   maros.mps           Inf         846        1443           5         Inf         Inf
-maros-r7.mps           Inf        3136        9408           5         Inf         Inf
- modszk1.mps           Inf         687        1620           5         Inf         Inf
-    nesm.mps           Inf         662        2923           5         Inf         Inf
-  noswot.mps           Inf         182         128           5         Inf         Inf
-   nsic1.mps           Inf         451         463           5         Inf         Inf
-  osa-07.mps           Inf        1118       23949           5         Inf         Inf
-  osa-14.mps           Inf        2337       52460           5         Inf         Inf
-  osa-30.mps           Inf        4350      100024           5         Inf         Inf
-  osa-60.mps           Inf       10280      232966           5         Inf         Inf
-   p0282.mps           Inf         241         282           5         Inf         Inf
-   p0291.mps           Inf         252         291           5         Inf         Inf
-   p0548.mps           Inf         176         548           5         Inf         Inf
-  pds-02.mps           Inf        2953        7535           5         Inf         Inf
-  pds-06.mps           Inf        9881       28655           5         Inf         Inf
-  pds-10.mps           Inf       16558       48763           5         Inf         Inf
-  pds-20.mps           Inf       33874      105728           5         Inf         Inf
-  perold.mps           Inf         625        1376           5         Inf         Inf
-  pilot4.mps           Inf         410        1000           5         Inf         Inf
- pilot87.mps           Inf        2030        4883           5         Inf         Inf
-pilot.ja.mps           Inf         940        1988           5         Inf         Inf
-   pilot.mps           Inf        1441        3652           5         Inf         Inf
-pilotnov.mps           Inf         975        2172           5         Inf         Inf
-pilot.we.mps           Inf         722        2789           5         Inf         Inf
-   qap08.mps           Inf         912        1632           5         Inf         Inf
-   qap12.mps           Inf        3192        8856           5         Inf         Inf
-   qap15.mps           Inf        6330       22275           5         Inf         Inf
-  recipe.mps           Inf          91         180           5         Inf         Inf
-  refine.mps           Inf          29          33           5         Inf         Inf
-   sc105.mps  -5.22021e+01         105         103           0          58      0.0921
-   sc205.mps  -5.22021e+01         205         203           0          55      0.1879
-   sc50a.mps  -6.45751e+01          50          48           0          26      0.0193
-   sc50b.mps  -7.00000e+01          50          48           0          22      0.0169
- scagr25.mps           NaN         471         500           3         758      9.0214
-  scagr7.mps   1.09842e+63         129         140           1        1000      1.9671
-  scfxm1.mps   3.55989e+32         330         457           1        1000     17.4085
-  scfxm2.mps           NaN         660         914           3         300     16.4116
-  scfxm3.mps   8.45375e+28         990        1371           2         246     30.0913
-scorpion.mps           Inf         388         358           5         Inf         Inf
-   scrs8.mps           Inf         490        1169           5         Inf         Inf
-   scsd1.mps   8.66667e+00          77         760           0          11      0.1803
-   scsd6.mps   5.05000e+01         147        1350           0          13      0.5547
-   scsd8.mps   9.05000e+02         397        2750           0          12      2.3584
-  sctap1.mps   1.41225e+03         300         480           0          19      0.3904
-  sctap2.mps   1.72481e+03        1090        1880           0          15      2.7167
-  sctap3.mps   1.42400e+03        1480        2480           0          17      5.7067
-    seba.mps           Inf         515        1028           5         Inf         Inf
- share1b.mps           NaN         117         225           3         199      1.0010
- ship08l.mps           Inf         778        4283           5         Inf         Inf
- ship08s.mps           Inf         778        2387           5         Inf         Inf
- ship12l.mps           Inf        1151        5427           5         Inf         Inf
- ship12s.mps           Inf        1151        2763           5         Inf         Inf
-  sierra.mps           Inf        1227        2036           5         Inf         Inf
-   stair.mps           Inf         356         467           5         Inf         Inf
-standata.mps           Inf         359        1075           5         Inf         Inf
-standgub.mps           Inf         361        1184           5         Inf         Inf
-standmps.mps           Inf         467        1075           5         Inf         Inf
-stocfor1.mps  -4.11320e+04         117         111           0          47      0.1502
-stocfor2.mps  -3.90244e+04        2157        2031           0          61     19.9583
-    tuff.mps           Inf         333         587           5         Inf         Inf
-vtp_base.mps           Inf         198         203           5         Inf         Inf
-  wood1p.mps   1.44290e+00         244        2594           0          18      4.7715
-   woodw.mps           Inf        1098        8405           5         Inf         Inf
+   afiro.mps  -4.64753e+02          27          32           0          79      0.0394
+    agg2.mps           NaN         516         302           3          49      1.3714
+    agg3.mps           NaN         516         302           3          47      1.3546
+     agg.mps           NaN         488         163           3          62      1.1336
+   bandm.mps   4.09883e+02         305         472           1        1000     15.1754
+   blend.mps  -3.08121e+01          74          83           0          19      0.0541
+  degen2.mps  -1.43518e+03         444         534           0          13      0.5143
+  degen3.mps  -9.87294e+02        1503        1818           2          81     30.2870
+    e226.mps  -1.87519e+01         223         282           0          28      0.4421
+    farm.mps   1.75000e+04           7          12           0          24      0.0067
+  israel.mps  -8.96645e+05         174         142           0         795      9.4469
+kleemin3.mps  -1.00000e+04           3           3           0          19      0.0033
+kleemin4.mps  -1.00000e+06           4           4           0          30      0.0066
+kleemin5.mps  -1.00000e+08           5           5           0          59      0.0123
+kleemin6.mps  -1.00000e+10           6           6           0          82      0.0234
+kleemin7.mps  -1.00000e+12           7           7           0         117      0.0297
+kleemin8.mps           NaN           8           8           3          43      0.0153
+   lotfi.mps           NaN         153         308           3         535      4.6556
+   sc105.mps  -5.22021e+01         105         103           0          58      0.1218
+   sc205.mps  -5.22021e+01         205         203           0          55      0.1865
+   sc50a.mps  -6.45751e+01          50          48           0          26      0.0174
+   sc50b.mps  -7.00000e+01          50          48           0          22      0.0162
+ scagr25.mps           NaN         471         500           3         758      8.4081
+  scagr7.mps   1.09842e+63         129         140           1        1000      1.9228
+  scfxm1.mps   3.55989e+32         330         457           1        1000     18.0226
+  scfxm2.mps           NaN         660         914           3         300     16.2714
+  scfxm3.mps   8.45375e+28         990        1371           2         288     30.0473
+   scsd1.mps   8.66667e+00          77         760           0          11      0.1548
+   scsd6.mps   5.05000e+01         147        1350           0          13      0.5962
+   scsd8.mps   9.05000e+02         397        2750           0          12      1.8279
+  sctap1.mps   1.41225e+03         300         480           0          19      0.4224
+  sctap2.mps   1.72481e+03        1090        1880           0          15      2.3029
+  sctap3.mps   1.42400e+03        1480        2480           0          17      4.4216
+ share1b.mps           NaN         117         225           3         199      1.1921
+stocfor1.mps  -4.11320e+04         117         111           0          47      0.1233
+stocfor2.mps  -3.90244e+04        2157        2031           0          61     16.5382
+  wood1p.mps   1.44290e+00         244        2594           0          18      4.4073

@@ -8,6 +8,9 @@ function clp_problema(problema; max_iter = 1000, max_time = 30)
   clp_valores.set_maximum_seconds(mod,max_time)
   solve_clp = clp_valores.initial_solve(mod)
   status = clp_valores.status(mod)
+  if status == 3
+    status = 1
+  end
   iter = clp_valores.number_iterations(mod)
   x = clp_valores.get_col_solution(mod)
   f = clp_valores.get_obj_value(mod)

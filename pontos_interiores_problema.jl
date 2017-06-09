@@ -125,9 +125,6 @@ function ler_problema(problema; lim_var = 3000, lim_rest = 5000)
     n_2 = length(c)
     c = [c;spzeros(n_1 - n_2)]
     return A, b, c, rest, vari
-  elseif rest > lim_rest || vari > lim_var
-    #error("Problema $problema saiu por erro no tamanho do problema")
-    return [],[],[],rest, vari
   else
     #error("Problema $problema saiu por erro nos limitantes de xub e xlb")
     return [],[],[],rest, vari
